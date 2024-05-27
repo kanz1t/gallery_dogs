@@ -15,20 +15,19 @@ function hideLoader () {
 }
 
 const fetchDownload =  async () => {
-   let data = await fetch(url);
-   let response = await data.json();
+    let data = await fetch(url);
+    let response = await data.json();
     imagesAddHtml(response)
 }
 
 const imagesAddHtml = (img) =>{ 
-
     for (let key in img) {
         let iimg = img[key];
-       
+        if(Array.isArray(iimg)){ 
             iimg.forEach(element => {
-                let photo = `<div class="block-images-content"> <img src="${element}" title="ff"></div>`
-                divno.innerHTML += photo;
-            });
+                divno.innerHTML += `<div class="block-images-content"> <img src="${element}" title="images"></div>`;
+            });   
+        }
             hideLoader ()
 }
     
@@ -38,7 +37,7 @@ try {
     showLoader ()
     fetchDownload()
 }catch { 
-    console.log("иди нахуй ублюдок")
+    console.log("ошибка")
 }
 })
 

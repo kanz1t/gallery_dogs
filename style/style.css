@@ -11,6 +11,7 @@ img {
 
 body{ 
     background-color: violet;
+    margin: 0px;
 }
 
 .header { 
@@ -23,6 +24,7 @@ body{
 }
 
 .main{
+    min-height: calc(100vh - 50px - 50px);
     display: flex;
     justify-content: center;
 }
@@ -79,4 +81,16 @@ body{
     border: 1px dashed white;
     height: auto;
     width: 190px;
+}
+
+.footer{
+    background: bisque;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    align-content: center;
+    border-top:  black solid 1px ;
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
 }
