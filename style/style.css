@@ -32,6 +32,7 @@ body{
 .main-block{
     text-align: center;
     width: 900px;
+    margin-bottom: 40px;
 }
 
 .loader {
@@ -92,5 +93,4 @@ body{
     border-top:  black solid 1px ;
     height: 50px;
     width: 100%;
-    margin-top: 40px;
 }
